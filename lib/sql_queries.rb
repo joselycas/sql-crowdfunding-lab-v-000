@@ -35,7 +35,7 @@ def selects_user_names_and_amounts_of_all_pledges_grouped_by_name_then_orders_th
 "SELECT users.name, pledges.amount
  FROM users
  JOIN pledges
- ON pledges.project_id = users.id
+ ON pledges.user_id= users.id
  GROUP BY users.name
  ORDER BY pledges.amount, users.name"
 end
